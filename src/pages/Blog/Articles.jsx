@@ -9,15 +9,13 @@ export default function Articles({ activeCategory , searchInput}) {
     const [showMode, setShowMode] = useState("grid")
 
     const filterdArticles = articles.posts.filter(article => {
-        const matchesCategory =
-            activeCategory == "all" ||
-            article.category == activeCategory
+        const selectedCategory = activeCategory == "all" || article.category == activeCategory
 
-        const matchesSearch =
+        const SearchArticles =
             article.title.toLowerCase().trim().includes(searchInput.toLowerCase().trim()) ||
             article.excerpt.toLowerCase().trim().includes(searchInput.toLowerCase().trim())
 
-        return matchesCategory && matchesSearch
+        return selectedCategory && SearchArticles
     })
     const articlesPerPage = 6
     const startIndex = (Number(activePage) - 1) * articlesPerPage
