@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { formatDate } from '../Helpers/Helpers'
 
-export default function ArticleCard({ article }) {
+export default function GridArticleCard({ article }) {
     return (
         <article className="group card overflow-hidden" style={{ animationDelay: "100ms" }}>
             <Link className="block" to={`/blog/${article.slug}`}>

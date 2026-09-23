@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Subscripion() {
     return (
         <section className="py-24 relative overflow-hidden bg-[#0a0a0a]">

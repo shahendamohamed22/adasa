@@ -1,6 +1,6 @@
 import { useState } from "react"
 import articles from "../../data/posts"
-import ArticleCard from "../../components/ArticleCard"
+import GridArticleCard from "../../components/GridArticleCard"
 import { Link } from "react-router-dom"
 
 export default function RecentArticles() {
@@ -38,7 +38,7 @@ export default function RecentArticles() {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {recentArticles.map((article) => (
-                        <ArticleCard article={article} />
+                        <GridArticleCard article={article} />
                     ))}
                 </div>
             </div>
